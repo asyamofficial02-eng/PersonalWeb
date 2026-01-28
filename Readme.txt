@@ -1,6 +1,2 @@
-Thanks for downloading this template!
+Thanks for making this site
 
-Template Name: Craftivo
-Template URL: https://bootstrapmade.com/craftivo-bootstrap-portfolio-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
