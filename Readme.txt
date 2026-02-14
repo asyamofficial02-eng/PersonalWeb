@@ -1,2 +1,1 @@
-Thanks for making this site
-
+Making a website is very fun and very challenging!
