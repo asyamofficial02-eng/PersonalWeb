@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>SEO Services</title>
+  <meta name="description" content="Professional SEO Services by DenMadd. Boost your Google ranking, organic traffic, and digital authority with data-driven strategies.">
+  <meta name="keywords" content="SEO Services, Technical SEO, Keyword Research, SEO Specialist, Digital Marketing">
+  <meta name="author" content="DenMadd">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SEO Services | DenMadd">
+  <meta property="og:description" content="Premium SEO solutions for long-term digital growth.">
+  <meta property="og:type" content="website">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #141414;
+  color: #fa373a;
+  overflow-x: hidden;
+}
+
+/* Subtle Red Gradient Background Glow */
+body::before {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(250,55,58,0.15) 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(250,55,58,0.1) 0%, transparent 70%);
+  bottom: -200px;
+  left: -200px;
+  z-index: -1;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(20,20,20,0.85);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  transition: 0.4s ease;
+  border-bottom: 1px solid rgba(250,55,58,0.2);
+}
+
+nav.scrolled {
+  background: rgba(10,10,10,0.95);
+  box-shadow: 0 10px 30px rgba(250,55,58,0.15);
+}
+
+nav h2 {
+  font-size: 35px;
+  color: #fa373a;
+  text-shadow: 0 0 15px rgba(250,55,58,0.6);
+}
+
+/* NAV LINKS + HOVER UNDERLINE ANIMATION */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #fa373a;
+  font-size: 14px;
+  padding-bottom: 5px;
+  transition: 0.3s;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #fa373a, #ff6b6b);
+  transition: 0.4s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* HEADER */
+header {
+  padding: 180px 10% 120px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #fa373a, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 25px rgba(250,55,58,0.4);
+}
+
+header p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  color: rgba(250,55,58,0.85);
+}
+
+/* SECTION TITLE */
+h2.section-title {
+  text-align: center;
+  margin-bottom: 70px;
+  font-size: 34px;
+  text-shadow: 0 0 20px rgba(250,55,58,0.3);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  background: rgba(27,27,27,0.8);
+  backdrop-filter: blur(8px);
+  padding: 35px;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  border: 1px solid rgba(250,55,58,0.15);
+  overflow: hidden;
+}
+
+/* Animated Border Line */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fa373a, transparent);
+  top: 0;
+  left: -100%;
+  transition: 0.6s;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(250,55,58,0.25);
+  border-color: #fa373a;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  text-shadow: 0 0 15px rgba(250,55,58,0.5);
+}
+
+.card p {
+  line-height: 1.8;
+  color: rgba(250,55,58,0.8);
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 45px;
+  text-shadow: 0 0 20px rgba(250,55,58,0.7);
+}
+
+/* CASE STUDY */
+.case {
+  background: rgba(27,27,27,0.9);
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 25px;
+  margin-top: 40px;
+  border: 1px solid rgba(250,55,58,0.2);
+  box-shadow: 0 10px 40px rgba(250,55,58,0.1);
+}
+
+.case h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-shadow: 0 0 15px rgba(250,55,58,0.6);
+}
+
+footer {
+  text-align: center;
+  padding: 50px;
+  background: #111;
+  color: rgba(250,55,58,0.6);
+  border-top: 1px solid rgba(250,55,58,0.2);
+}
+
+
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <h2>DenMadd</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#stats">Results</a></li>
+    <li><a href="#case">Case Study</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Premium SEO Services</h1>
+  <p>
+    I help brands dominate search engines through strategic SEO optimization,
+    technical excellence, and data-driven content strategies that generate
+    long-term organic growth and sustainable authority.
+  </p>
+</header>
+
+<section id="services">
+  <h2 class="section-title">Our Core Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Keyword & Market Research</h3>
+      <p>Comprehensive competitor analysis, search intent mapping, and high-value keyword targeting to ensure strategic ranking opportunities.</p>
+    </div>
+    <div class="card">
+      <h3>Technical SEO Optimization</h3>
+      <p>Improving site speed, indexing, schema markup, mobile performance, and crawl structure to maximize search engine visibility.</p>
+    </div>
+    <div class="card">
+      <h3>Content & Authority Building</h3>
+      <p>SEO-focused content strategy combined with internal linking systems and authority positioning.</p>
+    </div>
+    <div class="card">
+      <h3>Conversion-Based SEO</h3>
+      <p>Not just traffic — optimizing user journey and search funnel to increase conversion rates.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stats">
+  <h2 class="section-title">Proven Results</h2>
+  <div class="stats">
+    <div class="stat">
+      <h3 class="counter" data-target="120">0</h3>
+      <p>Projects Optimized</p>
+    </div>
+    <div class="stat">
+      <h3 class="counter" data-target="300">0</h3>
+      <p>% Avg Traffic Growth</p>
+    </div>
+    <div class="stat">
+      <h3 class="counter" data-target="95">0</h3>
+      <p>% Client Retention</p>
+    </div>
+  </div>
+</section>
+
+<section id="case">
+  <h2 class="section-title">Case Study</h2>
+  <div class="case">
+    <h3>E-Commerce Brand Growth</h3>
+    <p>
+      A fashion e-commerce client struggled with low organic traffic and poor keyword visibility.
+      Through technical restructuring, targeted content strategy, and backlink acquisition,
+      organic traffic increased by 280% within 6 months.
+    </p>
+    <p style="margin-top:15px;">
+      Results:
+      ✔ Ranked Top 3 for 25+ commercial keywords  
+      ✔ Increased revenue by 150%  
+      ✔ Improved site speed by 40%
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 DenMadd Digital Agency | SEO Specialist & Web Developer
+</footer>
+
+<script>
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+  });
+
+  const counters = document.querySelectorAll('.counter');
+
+  counters.forEach(counter => {
+    const update = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / 100;
+
+      if(count < target){
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(update, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    update();
+  });
+</script>
+
+</body>
+</html>

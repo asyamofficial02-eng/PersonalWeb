@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Apps</title>
+
+<link href="assets/img/application.png">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #ff383b;
+    font-size: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff383b;
+}
+
+/* ===== SECTION ===== */
+section {
+    padding: 140px 60px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 42px;
+    color: #ff383b;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff383b, transparent);
+}
+
+p {
+    max-width: 750px;
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* ===== GLASS CARD ===== */
+.card {
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255,56,59,0.4);
+}
+
+.card h3 {
+    color: #ff383b;
+    margin-bottom: 10px;
+}
+
+/* ===== REVEAL ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 12px 35px;
+    border: 2px solid #ff383b;
+    color: #ff383b;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff383b;
+    color: white;
+    box-shadow: 0 0 20px rgba(255,56,59,0.6);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>DenMadd</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="development.html">Development</a>
+        <a href="mobile-apps.html">Mobile Apps</a>
+    </div>
+</nav>
+
+<section class="reveal">
+    <h1>Mobile Apps Development</h1>
+
+    <p>
+        RaddTech develops modern mobile applications designed to deliver 
+        smooth performance, intuitive user experience, and scalable architecture.
+        Every mobile solution is crafted with attention to detail, usability,
+        and long-term adaptability.
+    </p>
+
+    <p>
+        The focus is not only on building functional apps, but also on creating 
+        digital products that feel seamless, responsive, and aligned with 
+        modern user behavior.
+    </p>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Cross-Platform Development</h3>
+            <p>
+                Building applications that run efficiently across multiple devices 
+                while maintaining consistent performance and design standards.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>User-Centered Design</h3>
+            <p>
+                Designing interfaces that prioritize clarity, accessibility,
+                and intuitive navigation to enhance user satisfaction.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Performance Optimization</h3>
+            <p>
+                Ensuring fast load times, smooth animations, and optimized 
+                resource management for reliable mobile performance.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Secure Architecture</h3>
+            <p>
+                Implementing secure data handling practices and structured 
+                backend integration to maintain data integrity and privacy.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>API Integration</h3>
+            <p>
+                Connecting applications with external services and databases 
+                to create dynamic and interactive mobile experiences.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Continuous Improvement</h3>
+            <p>
+                Regular testing, debugging, and updates to ensure the 
+                application remains stable, secure, and future-ready.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="btn">Back to Portfolio</a>
+</section>
+
+<script>
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((el) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const visible = 100;
+
+        if (elementTop < windowHeight - visible) {
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>
