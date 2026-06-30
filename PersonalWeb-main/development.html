@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Development</title>
+
+<link href="assets/img/code.png" rel="icon">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav h2 {
+    font-size: 35px;
+    color: #ff383b;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff383b;
+}
+
+/* ===== SECTION ===== */
+section {
+    padding: 140px 60px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 42px;
+    color: #ff383b;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff383b, transparent);
+}
+
+p {
+    max-width: 750px;
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* ===== GLASS CARD ===== */
+.card {
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255,56,59,0.4);
+}
+
+.card h3 {
+    color: #ff383b;
+    margin-bottom: 10px;
+}
+
+/* ===== REVEAL ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 12px 35px;
+    border: 2px solid #ff383b;
+    color: #ff383b;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff383b;
+    color: white;
+    box-shadow: 0 0 20px rgba(255,56,59,0.6);
+}
+
+.code-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    z-index: 0;
+    opacity: 0.1;
+    font-family: monospace;
+    color: #ff383b;
+    pointer-events: none;
+    animation: scrollCode 30s linear infinite;
+}
+
+.code-bg pre {
+    padding: 40px;
+    font-size: 14px;
+}
+
+@keyframes scrollCode {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+section {
+    position: relative;
+    z-index: 2;
+}
+
+.skill {
+    margin-top: 25px;
+    max-width: 600px;
+}
+
+.skill p {
+    margin-bottom: 5px;
+}
+
+.progress {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #ff383b, #ff6b6b);
+    border-radius: 10px;
+    animation: grow 2s ease forwards;
+}
+
+@keyframes grow {
+    from { width: 0; }
+}
+
+</style>
+</head>
+
+<body>
+<nav>
+    <h2>DenMadd</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="brand-identity.html">Brand</a>
+        <a href="development.html">Development</a>
+    </div>
+</nav>
+
+<section class="reveal">
+    <h1>Development</h1>
+<p>
+    At RaddTech, development is not just about writing code — it is about 
+    building structured, scalable, and future-ready digital systems.
+    Every solution is crafted with clean architecture, performance optimization,
+    and long-term maintainability in mind.
+</p>
+
+<p>
+    The development process focuses on clarity, efficiency, and precision.
+    From interface design to backend logic, each layer of the system is
+    carefully structured to ensure seamless functionality and user experience.
+</p>
+
+<p>
+    By combining technical knowledge with creative problem-solving,
+    RaddTech aims to deliver digital products that are reliable,
+    adaptable, and aligned with modern industry standards.
+</p>
+
+    <div class="grid">
+        <div class="card">
+    <h3>UI / UX Implementation</h3>
+    <p>
+        Translating design concepts into functional interfaces 
+        that are intuitive, responsive, and visually consistent 
+        across multiple devices.
+    </p>
+</div>
+
+<div class="card">
+    <h3>Problem Solving</h3>
+    <p>
+        Analyzing system requirements and breaking down complex 
+        problems into efficient and structured solutions 
+        through logical thinking and clean code practices.
+    </p>
+</div>
+
+<div class="card">
+    <h3>Continuous Learning</h3>
+    <p>
+        Staying updated with modern frameworks, tools, and 
+        development trends to continuously improve technical expertise 
+        and adapt to evolving technology landscapes.
+    </p>
+</div>
+
+
+        <div class="reveal" style="margin-top:80px;">
+    <h1>Technical Skills</h1>
+
+    <div class="skill">
+        <p>HTML</p>
+        <div class="progress"><span style="width:90%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>CSS</p>
+        <div class="progress"><span style="width:85%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>JavaScript</p>
+        <div class="progress"><span style="width:75%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>Git & GitHub</p>
+        <div class="progress"><span style="width:70%"></span></div>
+    </div>
+</div>
+
+
+    </div>
+
+    <a href="index.html" class="btn">Back to Portfolio</a>
+</section>
+
+<script>
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((el) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const visible = 100;
+
+        if (elementTop < windowHeight - visible) {
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>

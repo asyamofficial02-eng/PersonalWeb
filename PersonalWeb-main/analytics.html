@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics</title>
+
+<link href="assets/img/business-report.png" rel="icon">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#141414;
+  color:#fa373a;
+  overflow-x:hidden;
+}
+
+section{
+  padding:100px 10%;
+}
+
+/* SCROLL REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:all 1s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* HERO */
+header{
+  padding:180px 10% 120px;
+  text-align:center;
+}
+
+header h1{
+  font-size:50px;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#fa373a,#ff6b6b);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 25px rgba(250,55,58,0.4);
+}
+
+header p{
+  max-width:750px;
+  margin:auto;
+  line-height:1.8;
+  color:rgba(250,55,58,0.8);
+}
+
+/* TITLE */
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+  font-size:32px;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:rgba(27,27,27,0.9);
+  padding:35px;
+  border-radius:20px;
+  border:1px solid rgba(250,55,58,0.2);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 40px rgba(250,55,58,0.25);
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #ff383b;
+    font-size: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff383b;
+}
+
+/* ANIMATED CHART */
+.chart-container{
+  max-width:800px;
+  margin:50px auto;
+}
+
+.bar{
+  margin:20px 0;
+}
+
+.bar-label{
+  margin-bottom:8px;
+}
+
+.bar-bg{
+  width:100%;
+  height:20px;
+  background:#1f1f1f;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.bar-fill{
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,#fa373a,#ff6b6b);
+  border-radius:20px;
+  transition:width 2s ease;
+  box-shadow:0 0 15px rgba(250,55,58,0.6);
+}
+
+/* DASHBOARD MOCKUP */
+.dashboard{
+  margin-top:60px;
+  background:rgba(27,27,27,0.95);
+  border-radius:25px;
+  padding:40px;
+  border:1px solid rgba(250,55,58,0.2);
+  box-shadow:0 20px 60px rgba(250,55,58,0.1);
+}
+
+.dashboard-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+.widget{
+  background:#1a1a1a;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  transition:0.4s;
+  border:1px solid rgba(250,55,58,0.15);
+  cursor:pointer;
+}
+
+.widget:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 30px rgba(250,55,58,0.3);
+}
+
+.widget h3{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.widget p{
+  font-size:13px;
+  color:rgba(250,55,58,0.7);
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  margin-top:80px;
+}
+
+.cta a{
+  padding:15px 45px;
+  border-radius:50px;
+  text-decoration:none;
+  background:linear-gradient(90deg,#fa373a,#ff6b6b);
+  color:#141414;
+  font-weight:600;
+  transition:0.4s;
+  box-shadow:0 0 25px rgba(250,55,58,0.4);
+}
+
+.cta a:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 40px rgba(250,55,58,0.8);
+}
+
+footer{
+  text-align:center;
+  padding:50px;
+  background:#111;
+  color:rgba(250,55,58,0.6);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>DenMadd</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="development.html">Development</a>
+        <a href="mobile-apps.html">Mobile Apps</a>
+        <a href="digital-marketing.html">Digital Marketing</a>
+    </div>
+</nav>
+
+
+<header class="reveal">
+  <h1>Advanced Data Analytics</h1>
+  <p>
+    Data is the foundation of modern digital growth. Through advanced analytics,
+    structured tracking systems, and strategic data interpretation, I help businesses
+    uncover actionable insights that drive measurable performance improvements.
+  </p>
+
+  <p style="margin-top:20px;">
+    From traffic acquisition analysis to conversion funnel optimization, every metric
+    is carefully evaluated to identify growth opportunities, eliminate inefficiencies,
+    and maximize marketing return on investment.
+  </p>
+
+  <p style="margin-top:20px;">
+    My analytics approach combines technical implementation with business intelligence —
+    ensuring that your decisions are backed by real data, not assumptions. Whether you're
+    scaling an e-commerce brand, SaaS platform, or corporate website, data-driven strategy
+    becomes your competitive advantage.
+  </p>
+
+  <p style="margin-top:20px;">
+    The result? Clear performance visibility, smarter marketing investments,
+    higher conversion rates, and sustainable long-term growth powered by precision analytics.
+  </p>
+</header>
+
+<section class="reveal">
+  <h2 class="section-title">Performance Growth Overview</h2>
+
+  <div class="chart-container">
+
+    <div class="bar">
+      <div class="bar-label">Traffic Growth (280%)</div>
+      <div class="bar-bg">
+        <div class="bar-fill" data-width="90%"></div>
+      </div>
+    </div>
+
+    <div class="bar">
+      <div class="bar-label">Conversion Rate Increase (150%)</div>
+      <div class="bar-bg">
+        <div class="bar-fill" data-width="75%"></div>
+      </div>
+    </div>
+
+    <div class="bar">
+      <div class="bar-label">Bounce Rate Reduction (45%)</div>
+      <div class="bar-bg">
+        <div class="bar-fill" data-width="60%"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="reveal">
+  <h2 class="section-title">Analytics Dashboard</h2>
+
+  <div class="dashboard">
+    <div class="dashboard-grid">
+      <div class="widget">
+        <h3>125K</h3>
+        <p>Monthly Visitors</p>
+      </div>
+
+      <div class="widget">
+        <h3>4.8%</h3>
+        <p>Conversion Rate</p>
+      </div>
+
+      <div class="widget">
+        <h3>$87K</h3>
+        <p>Revenue Generated</p>
+      </div>
+
+      <div class="widget">
+        <h3>32%</h3>
+        <p>Engagement Increase</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a href="#">Analyze Your Growth</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 DenMadd Digital Agency | Data Intelligence Specialist
+</footer>
+
+<script>
+/* Scroll Reveal */
+function reveal(){
+  const reveals=document.querySelectorAll(".reveal");
+  reveals.forEach(el=>{
+    const windowHeight=window.innerHeight;
+    const elementTop=el.getBoundingClientRect().top;
+    const elementVisible=100;
+
+    if(elementTop < windowHeight - elementVisible){
+      el.classList.add("active");
+    }
+  });
+}
+window.addEventListener("scroll", reveal);
+reveal();
+
+/* Animated Chart */
+const bars=document.querySelectorAll(".bar-fill");
+
+function animateBars(){
+  bars.forEach(bar=>{
+    const rect=bar.getBoundingClientRect();
+    if(rect.top < window.innerHeight){
+      bar.style.width=bar.dataset.width;
+    }
+  });
+}
+window.addEventListener("scroll", animateBars);
+animateBars();
+</script>
+
+</body>
+</html>

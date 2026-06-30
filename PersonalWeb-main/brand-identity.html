@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Identity</title>
+
+<link href="assets/img/robotic-hand.png" rel="icon">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #141414;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
+    background: linear-gradient(180deg, #141414, #0d0d0d);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav h2 {
+    color: #ff383b;
+    letter-spacing: 1px;
+    font-size: 35px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff383b;
+}
+
+/* ===== SECTION ===== */
+section {
+    padding: 140px 60px;
+    min-height: 100vh;
+}
+
+/* ===== TITLE ===== */
+h1 {
+    font-size: 42px;
+    color: #ff383b;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Animated Gradient Line */
+h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff383b, transparent);
+    animation: slideLine 3s infinite linear;
+}
+
+@keyframes slideLine {
+    0% { width: 0; }
+    50% { width: 120px; }
+    100% { width: 0; }
+}
+
+p {
+    max-width: 700px;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+/* ===== GLASS CARD ===== */
+.card {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255, 56, 59, 0.4);
+}
+
+/* ===== LOGO PREVIEW ===== */
+.logo-preview {
+    margin-top: 50px;
+    color: #ff383b;
+    animation: floatLogo 3s ease-in-out infinite;
+    text-shadow: 0 0 20px rgba(255, 56, 59, 0.6);
+}
+
+@keyframes floatLogo {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.logo-preview img,
+.logo-preview img:hover,
+img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.2s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 35px;
+    border: 2px solid #ff383b;
+    color: #ff383b;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff383b;
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(255, 56, 59, 0.7);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>DenMadd</h2>
+    <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#logo">Logo</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="index.html">Back</a></li>
+    </ul>
+</nav>
+
+<section id="overview" class="reveal">
+    <div class="card">
+    <h3>Brand Mission</h3>
+    <p>
+        RaddTech exists to build innovative and impactful digital solutions 
+        that combine modern design, clean architecture, and strong technical execution.
+        The mission is not only to create websites or applications, but to craft 
+        meaningful digital experiences that solve real problems.
+    </p>
+
+    <p>
+        By continuously learning, adapting to new technologies, and maintaining 
+        high standards of quality, RaddTech aims to deliver digital products 
+        that are reliable, scalable, and future-ready.
+    </p>
+
+    <p>
+        Every project is approached with precision, creativity, and responsibility —
+        ensuring that design and functionality work seamlessly together.
+    </p>
+</div>
+
+<div class="card">
+    <h3>Core Values</h3>
+    <p>
+        <strong>1. Innovation</strong> – Always exploring new ideas and technologies to stay ahead.<br><br>
+        <strong>2. Precision</strong> – Attention to detail in every line of code and design element.<br><br>
+        <strong>3. Integrity</strong> – Building digital products with honesty, quality, and responsibility.
+    </p>
+</div>
+
+<div class="card">
+    <h3>Brand Tagline</h3>
+    <p style="font-size:20px; color:#ff383b; letter-spacing:2px;">
+        "Transforming Ideas into Digital Reality."
+    </p>
+</div>
+
+</section>
+
+<section id="logo" class="reveal">
+    <h1>Logo Concept</h1>
+
+    <p>
+        RaddTech is a personal tech brand built from the name “Radd” 
+        combined with “Tech” to represent expertise in technology, 
+        software development, and digital innovation.
+    </p>
+
+    <div>
+        <img src="assets/img/ChatGPT_Image_Feb_14__2026__09_31_57_AM-removebg-preview.png" alt="logo-preview">
+    </div>
+
+    <div class="card">
+        <h3>Personal Identity</h3>
+        <p>
+            “Radd” represents the creator behind the brand — a developer 
+            driven by creativity, ambition, and continuous growth. 
+            It reflects individuality and personal vision in the digital world.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Technology Focus</h3>
+        <p>
+            “Tech” symbolizes technical expertise, structured thinking, 
+            and modern digital solutions. It represents coding, system design, 
+            and innovation in software development.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Brand Direction</h3>
+        <p>
+            RaddTech stands for modern, clean, and high-performance digital 
+            craftsmanship — combining personal identity with professional technology.
+        </p>
+    </div>
+</section>
+
+
+<script>
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((el) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const visible = 100;
+
+        if (elementTop < windowHeight - visible) {
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+    
+
+</body>
+</html>
