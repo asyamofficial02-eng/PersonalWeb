@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Security</title>
+
+<link href="assets/img/cyber-security.png" rel="icon">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#141414;
+  color:#fa373a;
+  overflow-x:hidden;
+  position:relative;
+}
+
+/* ANIMATED CYBER GRID BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-image:
+    linear-gradient(rgba(250,55,58,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250,55,58,0.08) 1px, transparent 1px);
+  background-size:40px 40px;
+  animation:gridMove 20s linear infinite;
+  z-index:-1;
+}
+
+@keyframes gridMove{
+  0%{background-position:0 0;}
+  100%{background-position:40px 40px;}
+}
+
+section{
+  padding:100px 10%;
+}
+
+/* HERO */
+header{
+  padding:180px 10% 120px;
+  text-align:center;
+}
+
+header h1{
+  font-size:50px;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#fa373a,#ff6b6b);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 30px rgba(250,55,58,0.5);
+}
+
+header p{
+  max-width:850px;
+  margin:20px auto;
+  line-height:1.9;
+  color:rgba(250,55,58,0.85);
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #ff383b;
+    font-size: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff383b;
+}
+
+/* STATS SECTION */
+.stats{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  gap:40px;
+  text-align:center;
+}
+
+.stat{
+  background:rgba(27,27,27,0.9);
+  padding:40px;
+  border-radius:20px;
+  border:1px solid rgba(250,55,58,0.2);
+  width:250px;
+  transition:0.4s;
+}
+
+.stat:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 40px rgba(250,55,58,0.3);
+}
+
+.stat h3{
+  font-size:42px;
+  margin-bottom:10px;
+  text-shadow:0 0 20px rgba(250,55,58,0.7);
+}
+
+.stat p{
+  color:rgba(250,55,58,0.8);
+}
+
+/* TITLE */
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+  font-size:32px;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  margin-top:80px;
+}
+
+.cta a{
+  padding:15px 45px;
+  border-radius:50px;
+  text-decoration:none;
+  background:linear-gradient(90deg,#fa373a,#ff6b6b);
+  color:#141414;
+  font-weight:600;
+  transition:0.4s;
+  box-shadow:0 0 25px rgba(250,55,58,0.4);
+}
+
+.cta a:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 40px rgba(250,55,58,0.8);
+}
+
+footer{
+  text-align:center;
+  padding:50px;
+  background:#111;
+  color:rgba(250,55,58,0.6);
+  border-top:1px solid rgba(250,55,58,0.2);
+}
+</style>
+</head>
+
+<body>
+
+    <nav>
+    <h2>DenMadd</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="development.html">Development</a>
+        <a href="mobile-apps.html">Mobile Apps</a>
+        <a href="digital-marketing.html">Digital Marketing</a>
+    </div>
+</nav>
+
+<header>
+  <h1>Advanced Digital Security</h1>
+  <p>
+    Modern cyber threats evolve every second. I implement proactive defense strategies,
+    system hardening, and intelligent monitoring frameworks to protect digital assets
+    against vulnerabilities, unauthorized access, and malicious attacks.
+  </p>
+  <p>
+    Security is not a one-time setup — it is a continuous process of assessment,
+    improvement, and real-time protection that ensures operational resilience
+    and long-term business stability.
+  </p>
+</header>
+
+<section>
+  <h2 class="section-title">Understanding Modern Threats</h2>
+
+  <div style="max-width:900px;margin:auto;text-align:center;line-height:1.9;color:rgba(250,55,58,0.85);">
+    
+    <p>
+      Cyber threats are constantly evolving — from brute-force attacks and SQL injection
+      attempts to sophisticated phishing campaigns and automated bot exploitation.
+      Businesses must remain adaptive and proactive in defending their systems.
+    </p>
+
+    <p style="margin-top:20px;">
+      I stay updated with current vulnerability trends and implement proactive
+      mitigation strategies that reduce exposure to emerging risks.
+      Continuous monitoring and system updates are key to maintaining digital stability.
+    </p>
+
+    <p style="margin-top:20px;">
+      In a digital-first world, resilience is competitive advantage.
+      A secure infrastructure protects not only data — but also brand reputation,
+      customer loyalty, and long-term growth potential.
+    </p>
+
+  </div>
+</section>
+
+
+<section>
+  <h2 class="section-title">Security Performance Metrics</h2>
+
+  <div class="stats">
+
+    <div class="stat">
+      <h3 class="counter" data-target="99">0</h3>
+      <p>% Threat Prevention Rate</p>
+    </div>
+
+    <div class="stat">
+      <h3 class="counter" data-target="24">0</h3>
+      <p>Hour Monitoring</p>
+    </div>
+
+    <div class="stat">
+      <h3 class="counter" data-target="300">0</h3>
+      <p>+ Vulnerabilities Secured</p>
+    </div>
+
+  </div>
+
+  <div class="cta">
+    <a href="#">Strengthen Your Security</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 DenMadd Digital Agency | Cyber Security & Infrastructure Protection
+</footer>
+
+<script>
+/* COUNTER ANIMATION */
+const counters=document.querySelectorAll(".counter");
+
+const startCounter=()=>{
+  counters.forEach(counter=>{
+    const update=()=>{
+      const target=+counter.getAttribute("data-target");
+      const count=+counter.innerText;
+      const increment=target/100;
+
+      if(count<target){
+        counter.innerText=Math.ceil(count+increment);
+        setTimeout(update,20);
+      } else{
+        counter.innerText=target;
+      }
+    };
+    update();
+  });
+};
+
+let counterStarted=false;
+window.addEventListener("scroll",()=>{
+  const statsSection=document.querySelector(".stats");
+  const position=statsSection.getBoundingClientRect().top;
+
+  if(position < window.innerHeight && !counterStarted){
+    startCounter();
+    counterStarted=true;
+  }
+});
+</script>
+
+</body>
+</html>

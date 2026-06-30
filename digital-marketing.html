@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Marketing</title>
+
+<link href="assets/img/marketing.png" rel="icon">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #ff383b;
+    font-size: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff383b;
+}
+
+/* ===== SECTION ===== */
+section {
+    padding: 140px 60px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 42px;
+    color: #ff383b;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff383b, transparent);
+}
+
+p {
+    max-width: 750px;
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* ===== GLASS CARD ===== */
+.card {
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255,56,59,0.4);
+}
+
+.card h3 {
+    color: #ff383b;
+    margin-bottom: 10px;
+}
+
+/* ===== REVEAL ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 12px 35px;
+    border: 2px solid #ff383b;
+    color: #ff383b;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff383b;
+    color: white;
+    box-shadow: 0 0 20px rgba(255,56,59,0.6);
+}
+
+.stats-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 200px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat-box h2 {
+    font-size: 40px;
+    color: #ff383b;
+}
+
+.timeline {
+    margin-top: 80px;
+}
+
+.timeline-item {
+    margin-top: 30px;
+    padding-left: 20px;
+    border-left: 3px solid #ff383b;
+}
+
+.dashboard {
+    margin-top: 80px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.dashboard-box {
+    padding: 25px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>DenMadd</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="development.html">Development</a>
+        <a href="mobile-apps.html">Mobile Apps</a>
+        <a href="digital-marketing.html">Digital Marketing</a>
+    </div>
+</nav>
+
+<section class="reveal">
+    <h1>Digital Marketing</h1>
+
+<p>
+    RaddTech approaches digital marketing as a strategic growth engine.
+    Every campaign is designed with a balance between creativity and analytics,
+    ensuring that brand communication is both impactful and measurable.
+</p>
+
+<p>
+    From audience research and content strategy to performance optimization
+    and campaign scaling, each step is carefully structured to deliver
+    sustainable digital growth and long-term brand positioning.
+</p>
+
+<p>
+    The focus is not only on visibility, but on engagement, conversion,
+    and meaningful digital relationships.
+</p>
+
+<div class="stats-container reveal">
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="120">0</h2>
+        <p>Campaign Projects</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="85">0</h2>
+        <p>Growth Rate (%)</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="500">0</h2>
+        <p>Content Created</p>
+    </div>
+</div>
+
+    <div class="timeline reveal">
+
+    <h1>Digital Growth Timeline</h1>
+
+    <div class="timeline-item">
+        <h3>1. Research & Strategy</h3>
+        <p>
+            Identifying target audience, analyzing competitors,
+            and defining clear campaign objectives.
+        </p>
+    </div>
+
+    <div class="timeline-item">
+        <h3>2. Content Execution</h3>
+        <p>
+            Creating optimized content aligned with brand voice
+            and digital engagement strategies.
+        </p>
+    </div>
+
+    <div class="timeline-item">
+        <h3>3. Optimization & Scaling</h3>
+        <p>
+            Monitoring performance data, refining campaigns,
+            and scaling successful strategies.
+        </p>
+    </div>
+
+    <div class="dashboard reveal">
+
+    <h1>Performance Dashboard</h1>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-box">
+            <h3>Engagement</h3>
+            <p>+45% increase in audience interaction</p>
+        </div>
+
+        <div class="dashboard-box">
+            <h3>Conversion Rate</h3>
+            <p>Improved by 30% through optimized campaigns</p>
+        </div>
+
+        <div class="dashboard-box">
+            <h3>Traffic Growth</h3>
+            <p>Organic reach expanded consistently month by month</p>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Social Media Strategy</h3>
+            <p>
+                Developing structured content plans to increase brand engagement,
+                audience interaction, and long-term digital growth.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Content Creation</h3>
+            <p>
+                Crafting visually appealing and value-driven content 
+                that aligns with brand identity and target audience needs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>SEO Optimization</h3>
+            <p>
+                Implementing search engine optimization strategies to improve 
+                visibility, ranking, and organic traffic growth.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Performance Analytics</h3>
+            <p>
+                Monitoring campaign performance through data analysis 
+                to refine strategies and maximize return on investment.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Brand Positioning</h3>
+            <p>
+                Strengthening brand identity through consistent messaging,
+                visual alignment, and strategic communication.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Paid Advertising</h3>
+            <p>
+                Designing targeted advertising campaigns that reach 
+                the right audience with optimized conversion strategies.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="btn">Back to Portfolio</a>
+</section>
+
+<script>
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((el) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const visible = 100;
+
+        if (elementTop < windowHeight - visible) {
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+<script>
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const c = +counter.innerText;
+        const increment = target / 100;
+
+        if (c < target) {
+            counter.innerText = `${Math.ceil(c + increment)}`;
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
+});
+</script>
+
+
+</body>
+</html>
